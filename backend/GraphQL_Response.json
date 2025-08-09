@@ -1,0 +1,204 @@
+{
+  "data": {
+    "orders": {
+      "nodes": [
+        {
+          "id": "gid://shopify/Order/6453323759906",
+          "email": null,
+          "totalPriceSet": {
+            "shopMoney": {
+              "amount": "6540.0"
+            }
+          },
+          "shippingAddress": {
+            "address1": "S-12 (Howrah) Bus Stand Newtown"
+          },
+          "lineItems": {
+            "edges": [
+              {
+                "node": {
+                  "id": "gid://shopify/LineItem/15780543299874",
+                  "name": "womens blazer",
+                  "quantity": 3,
+                  "title": "womens blazer",
+                  "variantTitle": null,
+                  "variant": {
+                    "image": null
+                  }
+                }
+              }
+            ]
+          },
+          "fulfillments": [
+            {
+              "id": "gid://shopify/Fulfillment/5713922949410",
+              "status": "SUCCESS"
+            }
+          ]
+        },
+        {
+          "id": "gid://shopify/Order/6453322940706",
+          "email": null,
+          "totalPriceSet": {
+            "shopMoney": {
+              "amount": "2398.0"
+            }
+          },
+          "shippingAddress": {
+            "address1": "S 12 Chitlapakkam Police station Jothi Nagar Chitlapakkam"
+          },
+          "lineItems": {
+            "edges": [
+              {
+                "node": {
+                  "id": "gid://shopify/LineItem/15780542218530",
+                  "name": "tshirt white",
+                  "quantity": 1,
+                  "title": "tshirt white",
+                  "variantTitle": null,
+                  "variant": {
+                    "image": null
+                  }
+                }
+              },
+              {
+                "node": {
+                  "id": "gid://shopify/LineItem/15780542251298",
+                  "name": "womens blazer",
+                  "quantity": 1,
+                  "title": "womens blazer",
+                  "variantTitle": null,
+                  "variant": {
+                    "image": null
+                  }
+                }
+              }
+            ]
+          },
+          "fulfillments": [
+            {
+              "id": "gid://shopify/Fulfillment/5713922523426",
+              "status": "SUCCESS"
+            }
+          ]
+        },
+        {
+          "id": "gid://shopify/Order/6453322809634",
+          "email": null,
+          "totalPriceSet": {
+            "shopMoney": {
+              "amount": "11445.0"
+            }
+          },
+          "shippingAddress": null,
+          "lineItems": {
+            "edges": [
+              {
+                "node": {
+                  "id": "gid://shopify/LineItem/15780542021922",
+                  "name": "Travelling Bag - Blue",
+                  "quantity": 1,
+                  "title": "Travelling Bag",
+                  "variantTitle": "Blue",
+                  "variant": {
+                    "image": null
+                  }
+                }
+              },
+              {
+                "node": {
+                  "id": "gid://shopify/LineItem/15780542054690",
+                  "name": "Travelling Bag - Bronze",
+                  "quantity": 1,
+                  "title": "Travelling Bag",
+                  "variantTitle": "Bronze",
+                  "variant": {
+                    "image": null
+                  }
+                }
+              },
+              {
+                "node": {
+                  "id": "gid://shopify/LineItem/15780542087458",
+                  "name": "Travelling Bag - Gray",
+                  "quantity": 1,
+                  "title": "Travelling Bag",
+                  "variantTitle": "Gray",
+                  "variant": {
+                    "image": null
+                  }
+                }
+              }
+            ]
+          },
+          "fulfillments": []
+        },
+        {
+          "id": "gid://shopify/Order/6453322514722",
+          "email": null,
+          "totalPriceSet": {
+            "shopMoney": {
+              "amount": "3815.0"
+            }
+          },
+          "shippingAddress": null,
+          "lineItems": {
+            "edges": [
+              {
+                "node": {
+                  "id": "gid://shopify/LineItem/15780541628706",
+                  "name": "Travelling Bag - Beige",
+                  "quantity": 1,
+                  "title": "Travelling Bag",
+                  "variantTitle": "Beige",
+                  "variant": {
+                    "image": null
+                  }
+                }
+              }
+            ]
+          },
+          "fulfillments": []
+        },
+        {
+          "id": "gid://shopify/Order/6453295153442",
+          "email": null,
+          "totalPriceSet": {
+            "shopMoney": {
+              "amount": "3815.0"
+            }
+          },
+          "shippingAddress": null,
+          "lineItems": {
+            "edges": [
+              {
+                "node": {
+                  "id": "gid://shopify/LineItem/15780495393058",
+                  "name": "Travelling Bag - Blue",
+                  "quantity": 1,
+                  "title": "Travelling Bag",
+                  "variantTitle": "Blue",
+                  "variant": {
+                    "image": null
+                  }
+                }
+              }
+            ]
+          },
+          "fulfillments": []
+        }
+      ]
+    }
+  },
+  "extensions": {
+    "cost": {
+      "requestedQueryCost": 70,
+      "actualQueryCost": 29,
+      "throttleStatus": {
+        "maximumAvailable": 2000,
+        "currentlyAvailable": 1971,
+        "restoreRate": 100
+      }
+    }
+  }
+}

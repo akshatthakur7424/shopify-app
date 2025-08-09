@@ -1,0 +1,120 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Store {
+  id          String   @id @default(cuid())
+  shop        String   @unique
+  accessToken String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  orders      Order[]
+}
+
+model Order {
+  id           String   @id @default(cuid())
+  orderId      String 
+  email        String?
+  totalAmount  Float
+  shippingAddress String?
+  storeId      String
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  store        Store         @relation(fields: [storeId], references: [id])
+  lineItems    LineItem[]
+  fulfillments Fulfillment[]
+
+  @@unique([storeId, orderId])
+}
+
+model LineItem {
+  id         String  @id @default(cuid())
+  lineItemId String 
+  name       String
+  quantity   Int
+  title      String
+  variant    String?
+  imageUrl   String?
+  orderId    String
+
+  order Order @relation(fields: [orderId], references: [id])
+}
+
+model Fulfillment {
+  id                   String @id @default(cuid())
+  shopifyFulfillmentId String 
+  status               String
+  orderId              String
+
+  order Order @relation(fields: [orderId], references: [id])
+}
+
+// model Store {
+//   id          String   @id @default(cuid())
+//   shop        String   @unique
+//   accessToken String
+//   installedAt DateTime @default(now())
+
+//   orders Order[]
+// }
+
+// model Order {
+//   id            String   @id @default(cuid())
+//   orderId       String
+//   orderNumber   String
+//   createdAt     DateTime
+//   totalAmount   Float
+//   currencyCode  String
+//   customerName  String?
+//   customerEmail String?
+//   shippingAddr  String?
+
+//   store   Store  @relation(fields: [storeId], references: [id])
+//   storeId String
+
+//   lineItems       LineItem[]
+//   fulfilmentItems FulfilmentItem[]
+
+//   @@unique([storeId, orderId])
+// }
+
+// model LineItem {
+//   id       String  @id @default(cuid())
+//   name     String
+//   quantity Int
+//   variant  String?
+
+//   order   Order  @relation(fields: [orderId], references: [id])
+//   orderId String
+
+//   fulfilmentItems FulfilmentItem[] 
+// }
+
+// model FulfilmentItem {
+//   id       String  @id @default(cuid())
+//   returnId String?
+//   qty      Int
+//   reason   String?
+//   imageURL String?
+
+//   order   Order  @relation(fields: [orderId], references: [id])
+//   orderId String
+
+//   lineItem   LineItem @relation(fields: [lineItemId], references: [id]) 
+//   lineItemId String
+
+//   images Image[]
+// }
+
+// model Image {
+//   id               String         @id @default(cuid())
+//   imageURL         String
+//   fulfilmentItem   FulfilmentItem @relation(fields: [fulfilmentItemId], references: [id])
+//   fulfilmentItemId String
+// }
